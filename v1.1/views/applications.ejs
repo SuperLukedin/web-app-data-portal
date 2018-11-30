@@ -1,0 +1,22 @@
+<% include header %>
+<div style="margin-left:130px; margin-top:130px">
+    <div><h2>Available Applications</h2></div>
+    <% rows.forEach(function(row){%>
+    <div>
+        <form action="http://localhost:3000/app" method="post">
+            <div style="margin-bottom:30px; margin-top:30px">
+                <div>
+                    <input type="hidden" name="app" value="<%=row.application%>">
+                </div>
+            </div>
+            
+            <div>
+                <input type="submit" name="submit" value="<%=row.application%>" class="btn btn-primary">
+            </div>
+        </form>
+        <div><a href="/external/<%=row.application%>">Download <%=row.application%></a></div>
+    </div>
+    <%});%>
+</div>
+
+<% include footer %>

@@ -1,0 +1,19 @@
+<% include header %>
+    <div style="margin-left:110px; margin-top:90px">
+        <h2>Add a application</h2>
+        <form action="http://njit.localtunnel.me/app/add-application" method="post" enctype="multipart/form-data">
+
+            <div style="margin-bottom:30px; margin-top:30px">
+                <label for="application">Application name</label>
+                <div>
+                    <input type="file" name="sampleFile">
+                </div>
+            </div>
+
+            <div>
+                <input type="submit" value="OK" class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+
+<% include footer %>

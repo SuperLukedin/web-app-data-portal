@@ -1,0 +1,19 @@
+<% include header %>
+<div style="margin-left:110px; margin-top:90px">
+    <h2>Delete a application</h2>
+    <form action="http://njit.localtunnel.me/app/delete-application" method="post">
+
+        <div style="margin-bottom:30px; margin-top:30px">
+            <label for="application">Application name</label>
+            <div>
+                <input type="text" name="application">
+            </div>
+        </div>
+
+        <div>
+            <input type="submit" name="submit" value="Delete" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+
+<% include footer %>

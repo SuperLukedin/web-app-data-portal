@@ -1,0 +1,40 @@
+<% include header %>
+
+<header>
+    <nav class="sticky">
+        <div class="row">
+            <img src="img/njit-logo.png" alt="njit-logo" class="logo">
+            <ul class="main-nav">
+                <li><a href="#js--section-datasets">Datasets</a></li>
+                <li><a href="/add">Add Descriptions</a>
+                <li><a href="/app">External Applications</a>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>    
+    </nav>
+</header>
+
+<div class="home">
+    <section>
+        <div class="bgColor"></div>
+    </section>
+</div> 
+
+<div>
+<section id="js--section-datasets">
+    <div class="dataDiv">
+        <ul class='nav nav-list span2'>
+            <li class="dataTitle" ><b>Datasets</b></li>
+                <% rows.forEach(function(row){%>
+                    <a class="list-group-item" href="/<%=row.Tables_in_newarkdata%>">
+                        <li>
+                            <%=row.Tables_in_newarkdata%>
+                        </li>
+                    </a>
+                <%});%>
+        </ul>
+    </div>
+</section>
+</div>
+
+<% include footer %>

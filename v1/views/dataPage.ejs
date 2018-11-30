@@ -1,0 +1,44 @@
+<% include header %>
+    <header class="jumbotron">
+        <div style="margin-left:50px; margin-right:50px">
+            <h1><%=tableName%></h1>
+            <div class="align">
+                <div class="btnWapper">
+                    <a class="btn btn-primary btn-large button" href="/<%=tableName%>/see-description">See Description</a>
+                </div>
+                <div class="btnWapper">
+                    <a class="btn btn-primary btn-large button" href="/<%=tableName%>/drop">Drop This Dataset</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="container">
+    <p>Tableau visualization</p>
+    <div>
+        <table class="table table-striped">
+            <thead>
+            <tr>                  
+                <%fields.forEach(function(field){%>
+                    <th>
+                        <%=field.name%>                           
+                    </th>
+                <%});%>                   
+             </tr>
+            </thead>
+            <%rows.forEach(function(row){%>
+                <tr>                      
+                    <%fields.forEach(function(field){%>
+                    <td>
+                        <%=row[field.name]%>
+                    </td>
+                    <%});%>                        
+                </tr>                    
+            <%});%>
+        </table>
+    </div>
+    <div class="btnWapper">
+        <a class="btn btn-primary btn-large button" href="/<%=tableName%>/<%=tableName%>.html">Visualize</a>
+    </div>
+    </div>    
+<% include footer %>

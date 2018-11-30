@@ -1,0 +1,23 @@
+<% include header %>
+<div style="margin-left:50px; margin-right:50px">
+    <form action="https://webapp-yuchenpeng.c9users.io/add" method="post">
+        <div style="margin-bottom:30px; margin-top:30px">
+            <label for="data_name">Dataset's name</label>
+            <div>
+                <input type="text" name="dataset">
+            </div>
+        </div>
+        
+        <div>
+            <label for="description">Description</label>
+            <div style="margin-bottom:30px">
+                <textarea name="description" id="description" cols="30" rows="4"></textarea>
+            </div>
+        </div>
+        
+        <div>
+            <input type="submit" name="submit" value="Add Description" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+<% include footer %>
